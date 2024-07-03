@@ -63,14 +63,14 @@ https://www.tooplate.com/view/2127-little-fashion
                                 <a class="nav-link active" href="about.php">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="Updates.php">Updates</a>
+                                <a class="nav-link active" href="News.php">News</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="faq.php">FAQs</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
+                                <a class="nav-link" href="contact.php">Contact</a>
                             </li>
                         </ul>
 

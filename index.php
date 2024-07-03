@@ -50,7 +50,7 @@ https://www.tooplate.com/view/2127-little-fashion
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="index.php">
                         <strong><span>iBUA</span> Hub</strong>
                     </a>
 
@@ -71,7 +71,7 @@ https://www.tooplate.com/view/2127-little-fashion
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="Updates.php">Updates</a>
+                                <a class="nav-link active" href="News.php">News</a>
                             </li>
 
                             <li class="nav-item">
@@ -79,7 +79,7 @@ https://www.tooplate.com/view/2127-little-fashion
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
+                                <a class="nav-link" href="contact.php">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -147,7 +147,7 @@ https://www.tooplate.com/view/2127-little-fashion
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="mb-5">Latest <span> Updates</span></h2>
+                <h2 class="mb-5">Latest <span> Events </span></h2>
             </div>
             <div class="col-lg-12 col-12">
                 <div class="carousel-inner">
@@ -202,13 +202,6 @@ https://www.tooplate.com/view/2127-little-fashion
         </div>
     </div>
 </section>
-
-<section class="p-5 align-items-center justify-content-center d-flex"> 
-    <button type="button" class="btn text-white" style="background-color: #FF4400"><a href="Updates.html" class="View More text-white">View More</a></button>
-</section>
-
-
-
                        
 		<div class="container">
 			<div class="row">

@@ -69,7 +69,7 @@ https://www.tooplate.com/view/2127-little-fashion
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="Updates.php">Updates</a>
+                                <a class="nav-link" href="News.php">News</a>
                             </li>
 
                             <li class="nav-item">
@@ -77,7 +77,7 @@ https://www.tooplate.com/view/2127-little-fashion
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
+                                <a class="nav-link" href="contact.php">Contact</a>
                             </li>
                         </ul>
                     </div>
