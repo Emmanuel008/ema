@@ -104,73 +104,56 @@ https://www.tooplate.com/view/2127-little-fashion
                         
                         <div class="col-lg-8 col-12">
                             <h2>General Info.</h2>
+                            <?php
+                            $host = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $db = "ibuahubdatastore";
+                            $port = 3306;
 
-                            <div class="accordion" id="accordionGeneral">
+                            // Create database connection
+                            $conn = new mysqli($host, $username, $password, $db, $port);
+                            if ($conn->connect_error) {
+                                die("Connection failed: ". $conn->connect_error);
+                            }
+
+                            $sql = "SELECT * FROM `faq` ORDER BY `id` DESC";
+                            $result = $conn->query($sql);
+                           
+
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {?>
+                                  
+                                    
+                                    <div class="accordion" id="accordionGeneral">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralOne" aria-expanded="true" aria-controls="accordionGeneralOne">
-                                        What is innovation?
+                                        <?php echo $row['question'];?>
                                         </button>
                                     </h2>
 
                                     <div id="accordionGeneralOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionGeneral">
 
 
-                                            <p class="large-paragraph">An innovation is a new or improved product or process (or combination thereof) that differs significantly from the unit's previous products or processes and that has been made available to potential users (product) or brought into use by the unit (process)..</p>
+                                            <p class="large-paragraph"><?php echo $row['answer'];?></p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralTwo" aria-expanded="false" aria-controls="accordionGeneralTwo">
-                                        What is invention?
-                                        </button>
-                                    </h2>
+                                <?php
+                                    
+                                }
+                            } else {
+                                echo "NO ITEMS UPLOADED";
+                            }
 
-                                    <div id="accordionGeneralTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionGeneral">
+                            $conn->close();
+                        ?>
 
-                                        <div class="accordion-body">
-                                            <p class="large-paragraph"><a href="https://www.tooplate.com/free-templates" target="_blank"></a> 
-                                                An Invention means the creation of a brand-new product or device; creation of a product or introduction of a process for the first time..</p>
-                                        </div>
-                                    </div>
-                                </div>
+                          
 
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralThree" aria-expanded="false" aria-controls="accordionGeneralThree">
-                                        Is the difference between innovation and invention?
-                                        </button>
-                                    </h2>
-
-                                    <div id="accordionGeneralThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionGeneral">
-
-                                        <div class="accordion-body">
-                                            <p class="large-paragraph">YES, these are two different concepts, though the two terms may sound alike. Common differences include:
-                                                a. Invention is the occurrence of an idea for a product or process that has never been made before. While Innovation is the about practical implementation of the new idea for the very first time.
-                                                
-                                                
-                                                b. The invention is related to the creation of new or novel product or process to the world. On the other hand, innovation means adding value or making a significant change or improvement in the existing product, process or service, introducing an effective critical way of using, producing or distributing something..</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                           
-
-                            
-                                    </h2>
-
-                                    <div id="accordionProductOne" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionProduct">
-
-                                        <div class="accordion-body">
-                                            <p class="large-paragraph"><strong>Lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-
-                                            <p class="large-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
 
                             </div>

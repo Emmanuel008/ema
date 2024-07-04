@@ -32,6 +32,41 @@ Tooplate 2127 Little Fashion
 https://www.tooplate.com/view/2127-little-fashion
 
 -->
+<style>
+        
+        .custom-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .custom-card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 1.5rem;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .card-text {
+            color: #666;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
     </head>
     
     <body>
@@ -213,39 +248,57 @@ https://www.tooplate.com/view/2127-little-fashion
 			</div>
 			<div class="row">
 				<div class="clients-carousel owl-carousel">
-					<div class="single-box">
-						<div class="img-area"><img alt="" class="img-fluid" src="images/COSTECH-13 - Copy.jpg"></div>
-						<div class="content">
-							<p>"iBUA Hub imenishika mkono kunisaidia katika hatua zangu za kibunifu."</p>
-							<h4>Sharmila Hassan</h4>
-							<h6>Mbunifu</h6>
-						</div>
-					</div>
-					<div class="single-box">
-						<div class="img-area"><img alt="" class="img-fluid" src="images/ima.jpeg"></div>
-						<div class="content">
-							<p>"Naishukuru serikali kupitia iBUA kwa ufuatiliaji na utekelezaji wenye matokeo chanya ."</p>
-							<h4>Emmanuel Jeremy</h4>
-							<h6>Mbunifu</h6>
-						</div>
-					</div>
-					<div class="single-box">
-						<div class="img-area"><img alt="" class="img-fluid" src="https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></div>
-						<div class="content">
-							<p>"Naishukuru serikali kupitia iBUA kwa ufuatiliaji na utekelezaji wenye matokeo chanya."</p>
-							<h4>Hamisa Juma</h4>
-							<h6>Mbunifu</h6>
-						</div>
-					</div>
-					<div class="single-box">
-						<div class="img-area"><img alt="" class="img-fluid" src="images/gee.jpeg"></div>
-						<div class="content">
-							<span class="rating-star"><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i></span>
-							<p>"iBUA Hub imenishika mkono kunisaidia katika hatua zangu za kibunifu.."</p>
-							<h4>Amirat Omary</h4>
-							<h6>Mbunifu</h6>
-						</div>
-					</div>
+                    <div class="card custom-card">
+                <img  src="images/COSTECH-13 - Copy.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sharmila Hassan</h5>
+                    <h6 class="card-title">Mbunifu</h6>
+                    <p class="card-text">"iBUA Hub imenishika mkono kunisaidia katika hatua zangu za kibunifu."</p>
+                    
+                </div>
+                <div class="card-footer text-muted text-center">
+                    <p>Published on July 4, 2024</p>
+                </div>
+            </div>
+                    
+                    <div class="card custom-card">
+                <img src="images/ima.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Emmanuel Jeremy</h5>
+                    <h6 class="card-title">Mbunifu</h6>
+                    <p class="card-text">"Naishukuru serikali kupitia iBUA kwa ufuatiliaji na utekelezaji wenye matokeo chanya ."</p>
+                    
+                </div>
+                <div class="card-footer text-muted text-center">
+                    <p>Published on July 4, 2024</p>
+                </div>
+            </div>
+				
+                    <div class="card custom-card">
+                <img  src="https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Hamisa Juma</h5>
+                    <h6 class="card-title">Mbunifu</h6>
+                    <p class="card-text">"Naishukuru serikali kupitia iBUA kwa ufuatiliaji na utekelezaji wenye matokeo chanya."</p>
+                    
+                </div>
+                <div class="card-footer text-muted text-center">
+                    <p>Published on July 4, 2024</p>
+                </div>
+            </div>
+                    <div class="card custom-card">
+                <img  src="images/gee.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Amirat Omary</h5>
+                    <h6 class="card-title">Mbunifu</h6>
+                    <p class="card-text">"iBUA Hub imenishika mkono kunisaidia katika hatua zangu za kibunifu.."</p>
+                    
+                </div>
+                <div class="card-footer text-muted text-center">
+                    <p>Published on July 4, 2024</p>
+                </div>
+            </div>
+                    
 				</div>
 			</div>
 		</div>
@@ -316,7 +369,7 @@ https://www.tooplate.com/view/2127-little-fashion
             </div>
         </footer>
 
-        <!-- JAVASCRIPT FILES -->
+        
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/Headroom.js"></script>

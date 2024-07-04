@@ -20,15 +20,138 @@
         <link href="css/bootstrap-icons.css" rel="stylesheet">
 
         <link rel="stylesheet" href="css/slick.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/base.css"/>
 
         <link href="css/tooplate-little-fashion.css" rel="stylesheet">
-<!--
 
-Tooplate 2127 Little Fashion
+        <!--
 
-https://www.tooplate.com/view/2127-little-fashion
+        Tooplate 2127 Little Fashion
 
--->
+        https://www.tooplate.com/view/2127-little-fashion
+
+        -->
+        <style>
+             .carousel-inner {
+
+padding: 1em;
+
+}
+
+.card {
+
+margin: 0 0.5em;
+
+box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+
+border: none;
+
+display: flex;
+
+flex-direction: column;
+
+height: 100%;
+
+width: 380px;
+
+}
+
+.card .card-body {
+
+overflow: hidden;
+
+flex-grow: 1;
+
+}
+
+.card-title,
+
+.card-text {
+
+overflow: hidden;
+
+text-overflow: ellipsis;
+
+white-space: nowrap;
+
+}
+
+.carousel-control-prev,
+
+.carousel-control-next {
+
+background-color: #e1e1e1;
+
+width: 6vh;
+
+height: 6vh;
+
+border-radius: 50%;
+
+top: 50%;
+
+transform: translateY(-50%);
+
+}
+
+@media (min-width: 768px) {
+
+.carousel-item {
+
+    margin-right: 0;
+
+    flex: 0 0 33.333333%;
+
+    display: block;
+
+}
+
+.carousel-inner {
+
+    display: flex;
+
+}
+
+}
+
+.card .img-wrapper {
+
+max-width: 100%;
+
+height: 13em;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+overflow: hidden;
+
+}
+
+.card img {
+
+max-height: 100%;
+
+max-width: 100%;
+
+object-fit: cover;
+
+}
+
+@media (max-width: 767px) {
+
+.card .img-wrapper {
+
+    height: 17em;
+
+}
+
+}
+        </style>
     </head>
     
     <body>
@@ -97,116 +220,110 @@ https://www.tooplate.com/view/2127-little-fashion
                 </div>
             </header>
 
-            <section class="products section-padding">
-                    <div class="tab-content mt-2" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                            <div class="row ml-2 mr-2">
-                                <div class="col-4">
-                                    <div class="card" >
-                                        <img src="images/COSTECH-19 - Copy.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Talent Pool</h5>
-                                          <p class="card-text">Specialized initiative designed to identify, nurture, and develop exceptional talent in various fields within the Zanzibar innovation ecosystem.</p>
-                                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="card" >
-                                        <img src="images/COSTECH-14 - Copy.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Training Management</h5>
-                                          <p class="card-text">Aims to equip entrepreneurs, innovators, and business leaders with the skills, knowledge, and tools necessary to effectively manage and grow their ventures.</p>
-                                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="card" >
-                                        <img src="images/COSTECH-14 - Copy.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Stakeholder Engagement</h5>
-                                          <p class="card-text"> iBUA Hub actively involves and communicates with individuals, groups, and organizations that have a vested interest or are affected by its activities.</p>
-                                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="row">
-                                <div class="col-lg-7 col-12">
-                                    <img src="images/COSTECH-19 - Copy.jpg" class="img-fluid mh-100" alt="">
-                                </div>
+            <section class="s-services" id="services">
 
-                                <div class="col-lg-5 col-12">
-                                    <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
-                                        <h4 class="mb-3">iBUA <span>Hub</span> <br>Talent <span>Pool</span> Program</h4>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 
-                                        <p>Specialized initiative designed to identify, nurture, and develop exceptional talent in various fields within the Zanzibar innovation ecosystem.</p>
-                                        <div class="mt-2 mt-lg-auto">
-                                            <a href="about.html" class="custom-link mb-2">
-                                                Read more 
-                                                <i class="bi-arrow-right ms-2"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- <div class="col-lg-10 col-12">
-                                <div class="tab-content mt-2" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            
-                                        <div class="row">
-                                            <div class="col-lg-7 col-12">
-                                                <img src="images/COSTECH-14 - Copy.jpg" class="img-fluid mh-100" alt="">
-                                            </div>
-            
-                                            <div class="col-lg-5 col-12">
-                                                <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
-                                                    <h4 class="mb-3">iBUA <span>Hub</span> <br>Stakeholder <span>training</span> Support</h4>
-            
-                                                    <p>
-                                                        Stakeholder engagement at iBUA Hub involves actively involving and collaborating with various individuals, organizations, and entities that have a vested interest in the success and growth of the innovation ecosystem in Zanziba</p>
-                                                    <div class="mt-2 mt-lg-auto">
-                                                        <a href="about.html" class="custom-link mb-2">
-                                                            Read more 
-                                                            <i class="bi-arrow-right ms-2"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
+    <div class="carousel-inner">
 
-                            <!-- <div class="col-lg-10 col-12">
-                                <div class="tab-content mt-2" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            
-                                        <div class="row">
-                                            <div class="col-lg-7 col-12">
-                                                <img src="images/COSTECH-14 - Copy.jpg" class="img-fluid mh-100" alt="">
-                                            </div>
-            
-                                            <div class="col-lg-5 col-12">
-                                                <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
-                                                    <h4 class="mb-3">iBUA <span>Hub</span> <br>Stakeholder <span>training</span> Support</h4>
-            
-                                                    <p>
-                                                        Stakeholder engagement at iBUA Hub involves actively involving and collaborating with various individuals, organizations, and entities that have a vested interest in the success and growth of the innovation ecosystem in Zanziba</p>
-                                                    <div class="mt-2 mt-lg-auto">
-                                                        <a href="about.html" class="custom-link mb-2">
-                                                            Read more 
-                                                            <i class="bi-arrow-right ms-2"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>        -->
-            </section>
+        <?php
+
+            $host = "localhost";
+
+            $username = "root";
+
+            $password = "";
+
+            $db = "ibuahubdatastore";
+
+            $port = 3306;
+
+
+            // Create database connection
+
+            $conn = new mysqli($host, $username, $password, $db, $port);
+
+            if ($conn->connect_error) {
+
+                die("Connection failed: ". $conn->connect_error);
+
+            }
+
+
+            $sql = "SELECT * FROM `news` ORDER BY `id` DESC";
+
+            $result = $conn->query($sql);
+
+            $activeClass = 'active';
+
+
+            if ($result->num_rows > 0) {
+
+                while ($row = $result->fetch_assoc()) {?>
+
+                  <div class="carousel-item active">
+
+                    <div class="card">
+
+                        <div class="img-wrapper">
+
+                            <img src="./images/<?php echo $row['photo'];?>" class="d-block w-100" alt="">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h5 class="card-title"><?php echo $row['title'];?></h5>
+
+                            <p class="card-text">“ <?php echo $row['content'];?> ”</p>
+
+                            <a href="<?php echo $row['link'];?>" class="btn btn-primary">Read more</a>
+
+                        </div>
+
+                    </div>
+
+                  </div>
+
+                <?php
+
+                    $activeClass = '';
+
+                }
+
+            } else {
+
+                echo "NO ITEMS UPLOADED";
+
+            }
+
+
+            $conn->close();
+
+        ?>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden">Previous</span>
+
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden">Next</span>
+
+    </button>
+
+</div>
+
+</section>
+
 
             <!-- <section class="products section-padding">
                 <div class="col-lg-10 col-12">
@@ -316,6 +433,25 @@ https://www.tooplate.com/view/2127-little-fashion
         <script src="js/jQuery.headroom.js"></script>
         <script src="js/slick.min.js"></script>
         <script src="js/custom.js"></script>
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script>
+        if ('loading' in HTMLImageElement.prototype) {
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(img => {
+                    img.src = img.dataset.src;
+                });
+            } else {
+                // Dynamically import the LazySizes library
+                const script = document.createElement('script');
+                script.src = '/js/lazysizes.min.js';
+                document.body.appendChild(script);
+            }
 
+
+
+        </script>
+        
     </body>
 </html>
