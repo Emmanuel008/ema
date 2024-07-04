@@ -34,123 +34,47 @@
 
         -->
         <style>
-             .carousel-inner {
+            
 
-padding: 1em;
 
-}
 
-.card {
+.custom-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            
+        }
+        .custom-card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 1.5rem;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .card-text {
+            color: #666;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
 
-margin: 0 0.5em;
-
-box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-
-border: none;
-
-display: flex;
-
-flex-direction: column;
-
-height: 100%;
-
-width: 380px;
-
-}
-
-.card .card-body {
-
-overflow: hidden;
-
-flex-grow: 1;
-
-}
-
-.card-title,
-
-.card-text {
-
-overflow: hidden;
-
-text-overflow: ellipsis;
-
-white-space: nowrap;
-
-}
-
-.carousel-control-prev,
-
-.carousel-control-next {
-
-background-color: #e1e1e1;
-
-width: 6vh;
-
-height: 6vh;
-
-border-radius: 50%;
-
-top: 50%;
-
-transform: translateY(-50%);
-
-}
-
-@media (min-width: 768px) {
-
-.carousel-item {
-
-    margin-right: 0;
-
-    flex: 0 0 33.333333%;
-
-    display: block;
-
-}
-
-.carousel-inner {
-
-    display: flex;
-
-}
-
-}
-
-.card .img-wrapper {
-
-max-width: 100%;
-
-height: 13em;
-
-display: flex;
-
-justify-content: center;
-
-align-items: center;
-
-overflow: hidden;
-
-}
-
-.card img {
-
-max-height: 100%;
-
-max-width: 100%;
-
-object-fit: cover;
-
-}
-
-@media (max-width: 767px) {
-
-.card .img-wrapper {
-
-    height: 17em;
-
-}
-
-}
         </style>
     </head>
     
@@ -221,106 +145,72 @@ object-fit: cover;
             </header>
 
             <section class="s-services" id="services">
-
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-
-    <div class="carousel-inner">
-
-        <?php
-
-            $host = "localhost";
-
-            $username = "root";
-
-            $password = "";
-
-            $db = "ibuahubdatastore";
-
-            $port = 3306;
-
-
-            // Create database connection
-
-            $conn = new mysqli($host, $username, $password, $db, $port);
-
-            if ($conn->connect_error) {
-
-                die("Connection failed: ". $conn->connect_error);
-
-            }
-
-
-            $sql = "SELECT * FROM `news` ORDER BY `id` DESC";
-
-            $result = $conn->query($sql);
-
-            $activeClass = 'active';
-
-
-            if ($result->num_rows > 0) {
-
-                while ($row = $result->fetch_assoc()) {?>
-
-                  <div class="carousel-item active">
-
-                    <div class="card">
-
-                        <div class="img-wrapper">
-
-                            <img src="./images/<?php echo $row['photo'];?>" class="d-block w-100" alt="">
-
-                        </div>
-
-                        <div class="card-body">
-
-                            <h5 class="card-title"><?php echo $row['title'];?></h5>
-
-                            <p class="card-text">“ <?php echo $row['content'];?> ”</p>
-
-                            <a href="<?php echo $row['link'];?>" class="btn btn-primary">Read more</a>
-
-                        </div>
-
-                    </div>
-
-                  </div>
-
+            <div class="row">
+				<div class="clients-carousel owl-carousel">
                 <?php
 
-                    $activeClass = '';
+                $host = "localhost";
+
+                $username = "root";
+
+                $password = "";
+
+                $db = "ibuahubdatastore";
+
+                $port = 3306;
+
+
+                // Create database connection
+
+                $conn = new mysqli($host, $username, $password, $db, $port);
+
+                if ($conn->connect_error) {
+
+                    die("Connection failed: ". $conn->connect_error);
 
                 }
 
-            } else {
 
-                echo "NO ITEMS UPLOADED";
+                $sql = "SELECT * FROM `news` ORDER BY `id` DESC";
 
-            }
+                $result = $conn->query($sql);
+
+                $activeClass = 'active';
 
 
-            $conn->close();
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {?>
+                        <div class="card custom-card">
+                        <img src="./images/<?php echo $row['photo'];?>" class="d-block w-100" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title"> <?php echo $row['title'];?></h5>
+                            
+                            <p class="card-text">" <?php echo $row['content'];?></p>
+                            <a href="<?php echo $row['link'];?>" class="btn btn-primary">Read more</a>
+                            
+                        </div>
+                        <div class="card-footer text-muted text-center">
+                        <p>Published on July 4, 2024</p>
+                        </div>
+                    </div>
+                   
+                    <?php
 
-        ?>
+                       
+                    }
 
-    </div>
+                } else {
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    echo "NO ITEMS UPLOADED";
 
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                }
 
-        <span class="visually-hidden">Previous</span>
 
-    </button>
+                $conn->close();
 
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-
-        <span class="visually-hidden">Next</span>
-
-    </button>
-
-</div>
+                ?>      
+				</div>
+			</div>
 
 </section>
 
@@ -426,16 +316,50 @@ object-fit: cover;
             </div>
         </footer>
 
-        <!-- JAVASCRIPT FILES -->
+     
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/Headroom.js"></script>
         <script src="js/jQuery.headroom.js"></script>
         <script src="js/slick.min.js"></script>
         <script src="js/custom.js"></script>
-        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="js/plugins.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+        </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
+        </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js">
+        </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+               $('.clients-carousel').owlCarousel({
+                   loop: true,
+                   nav: false,
+                   autoplay: true,
+                   autoplayTimeout: 5000,
+                   animateOut: 'fadeOut',
+                   animateIn: 'fadeIn',
+                   smartSpeed: 450,
+                   margin: 30,
+                   responsive: {
+                       0: {
+                           items: 1
+                       },
+                       768: {
+                           items: 2
+                       },
+                       991: {
+                           items: 3
+                       },
+                       1200: {
+                           items: 3
+                       },
+                       1920: {
+                           items: 3
+                       }
+                   }
+               });
+        </script>
         <script>
         if ('loading' in HTMLImageElement.prototype) {
                 const images = document.querySelectorAll('img[loading="lazy"]');
