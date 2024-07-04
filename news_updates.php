@@ -154,7 +154,7 @@ $result = $conn->query("SELECT * FROM news");
             color: #fff;
         }
         .navbar-brand span {
-            color: #ff6347; /* Tomato color */
+            color: #ff6347;
         }
         .nav-link {
             color: #fff !important;

@@ -275,7 +275,7 @@ https://www.tooplate.com/view/2127-little-fashion
             </div>
 				
                     <div class="card custom-card">
-                <img  src="https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+                <img   src="images/gee.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Hamisa Juma</h5>
                     <h6 class="card-title">Mbunifu</h6>
@@ -287,7 +287,7 @@ https://www.tooplate.com/view/2127-little-fashion
                 </div>
             </div>
                     <div class="card custom-card">
-                <img  src="images/gee.jpeg" class="card-img-top" alt="...">
+                <img src="https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Amirat Omary</h5>
                     <h6 class="card-title">Mbunifu</h6>
