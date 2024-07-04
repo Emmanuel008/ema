@@ -9,7 +9,7 @@
 
         <title>iBUA Innovation Hub - Updates</title>
 
-        <!-- CSS FILES -->
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,13 +26,7 @@
 
         <link href="css/tooplate-little-fashion.css" rel="stylesheet">
 
-        <!--
-
-        Tooplate 2127 Little Fashion
-
-        https://www.tooplate.com/view/2127-little-fashion
-
-        -->
+      
         <style>
             
 

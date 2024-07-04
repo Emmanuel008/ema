@@ -323,7 +323,7 @@ $result = $conn->query("SELECT * FROM news");
                                         <input type="hidden" name="id" value="<?php echo $row['id'];?>">
                                         <button type="submit" name="delete" class="btn btn-danger btn-sm">Delete</button>
                                     </form>
-                                    <button type="button" class="btn btn-warning btn-sm" style="width:57px;" onclick="editRecord(<?php echo $row['id'];?>, '<?php echo $row['title'];?>', '<?php echo $row['content'];?>', '<?php echo $row['link'];?>')">Edit</button>
+                                    <button type="button" class="btn btn-warning btn-sm" style="width:87px;" onclick="editRecord(<?php echo $row['id'];?>, '<?php echo $row['title'];?>', '<?php echo $row['content'];?>', '<?php echo $row['link'];?>')">Edit</button>
                                 </td>
                             </tr>
                         <?php endwhile;?>

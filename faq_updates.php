@@ -257,7 +257,7 @@ $result = $conn->query("SELECT * FROM faq");
     <div class="row">
         <div class="col-md-5">
             <div class="form-container">
-                <img src="images/news.png" alt="Homepage">
+                <img src="images/help.png" alt="Homepage">
                 <form id="uploadForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data" novalidate>
                     <input type="hidden" name="id" value="">
                  
@@ -301,7 +301,7 @@ $result = $conn->query("SELECT * FROM faq");
                                         <input type="hidden" name="id" value="<?php echo $row['id'];?>">
                                         <button type="submit" name="delete" class="btn btn-danger btn-sm">Delete</button>
                                     </form>
-                                    <button type="button" class="btn btn-warning btn-sm" style="width:57px;" onclick="editRecord(<?php echo $row['id'];?>, '<?php echo $row['question'];?>', '<?php echo $row['answer'];?>')">Edit</button>
+                                    <button type="button"  class="btn btn-warning btn-sm" style="width:87px;" onclick="editRecord(<?php echo $row['id'];?>, '<?php echo $row['question'];?>', '<?php echo $row['answer'];?>')">Edit</button>
                                 </td>
                             </tr>
                         <?php endwhile;?>
