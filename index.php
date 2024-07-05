@@ -171,7 +171,7 @@ https://www.tooplate.com/view/2127-little-fashion
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="News.php">News</a>
+                                <a class="nav-link" href="News.php">News</a>
                             </li>
 
                             <li class="nav-item">
