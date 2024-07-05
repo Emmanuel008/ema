@@ -57,9 +57,7 @@
         }
         .card-text {
             color: #666;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            
         }
         .btn-primary {
             background-color: #007bff;
@@ -184,7 +182,7 @@
                             
                         </div>
                         <div class="card-footer text-muted text-center">
-                        <p>Published on July 4, 2024</p>
+                        <p><strong>Published on July 4, 2024</strong></p>
                         </div>
                     </div>
                    

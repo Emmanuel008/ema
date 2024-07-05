@@ -16,7 +16,7 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+       
         <link href="css/bootstrap-icons.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet">
 
@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="css/partner.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+        
 <!--
 
 Tooplate 2127 Little Fashion
@@ -33,32 +34,87 @@ https://www.tooplate.com/view/2127-little-fashion
 
 -->
 <style>
-        
-        .custom-card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        .custom-card:hover {
-            transform: translateY(-5px);
-        }
-        .card-img-top {
-            height: 300px;
-            object-fit: cover;
-        }
-        .card-body {
-            padding: 1.5rem;
-        }
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #333;
-        }
-        .card-text {
-            color: #666;
-        }
+    
+ @media (max-width:991.98px) {
+     .padding {
+         padding: 1.5rem
+     }
+ }
+
+ @media (max-width:767.98px) {
+     .padding {
+         padding: 1rem
+     }
+ }    
+   
+
+
+ .padding {
+     padding: 5rem
+ }
+
+ .card {
+    position: relative;
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #d2d2dc;
+    border-radius: 11px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(212,182,212,1);
+    box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+}
+
+ .card .card-body {
+        padding: 1rem 1rem;
+ }
+
+ .card-body {
+     flex: 1 1 auto;
+     padding: 1.25rem
+ }
+
+ p {
+     font-size: 0.875rem;
+     margin-bottom: .5rem;
+     line-height: 1.5rem
+ }
+
+.profile{
+           margin-top: 16px;
+    margin-left: 11px;
+}
+
+.profile-pic{
+     width: 200px;
+}
+
+.cust-name{
+     font-size: 18px;
+}
+
+.cust-profession{
+     font-size: 10px;
+}
+
+
+
+.items {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 100px
+}
+
+
+
+
+
+
+
         .btn-primary {
             background-color: #007bff;
             border: none;
@@ -248,61 +304,143 @@ https://www.tooplate.com/view/2127-little-fashion
 			</div>
 			<div class="row">
 				<div class="clients-carousel owl-carousel">
-                    <div class="card custom-card">
-                <img  src="images/COSTECH-13 - Copy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sharmila Hassan</h5>
-                    <h6 class="card-title">Mbunifu</h6>
-                    <p class="card-text">"iBUA Hub imenishika mkono kunisaidia katika hatua zangu za kibunifu."</p>
-                    
-                </div>
-                <div class="card-footer text-muted text-center">
-                    <p>Published on July 4, 2024</p>
-                </div>
-            </div>
-                    
-                    <div class="card custom-card">
-                <img src="images/ima.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Emmanuel Jeremy</h5>
-                    <h6 class="card-title">Mbunifu</h6>
-                    <p class="card-text">"Naishukuru serikali kupitia iBUA kwa ufuatiliaji na utekelezaji wenye matokeo chanya ."</p>
-                    
-                </div>
-                <div class="card-footer text-muted text-center">
-                    <p>Published on July 4, 2024</p>
-                </div>
-            </div>
-				
-                    <div class="card custom-card">
-                <img   src="images/gee.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Hamisa Juma</h5>
-                    <h6 class="card-title">Mbunifu</h6>
-                    <p class="card-text">"Naishukuru serikali kupitia iBUA kwa ufuatiliaji na utekelezaji wenye matokeo chanya."</p>
-                    
-                </div>
-                <div class="card-footer text-muted text-center">
-                    <p>Published on July 4, 2024</p>
-                </div>
-            </div>
-                    <div class="card custom-card">
-                <img src="https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Amirat Omary</h5>
-                    <h6 class="card-title">Mbunifu</h6>
-                    <p class="card-text">"iBUA Hub imenishika mkono kunisaidia katika hatua zangu za kibunifu.."</p>
-                    
-                </div>
-                <div class="card-footer text-muted text-center">
-                    <p>Published on July 4, 2024</p>
-                </div>
-            </div>
-                    
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" style="line-height: .2;"><img src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" style="height:50px;width:50px;"></h4>
+                        
+                        <div class="template-demo">
+                            <p>"Naishukuru serikali kupitia iBUA kwa ufuatiliaji na utekelezaji wenye matokeo chanya ."</p>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+
+                              <div class="col-sm-2">
+                                    
+                                    <img class="profile-pic card-img-top" style="width: 60px;height:65px;margin-top:15px;border-radius:10px" src="images/ima.jpeg" >
+                                    
+                              </div>
+
+                              <div class="col-sm-10">
+                                    
+                                    <div class="profile">
+                                      
+                                      <h4 class="cust-name">Emmanuel Jeremy</h4>
+                                    <p class="cust-profession">Mbunifu</p>    
+                                    </div>
+                        </div>
+
+                    </div>
+
 				</div>
+
 			</div>
+
+            <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" style="line-height: .2;"><img src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" style="height:50px;width:50px;"></h4>
+                        
+                        <div class="template-demo">
+                            <p>"iBUA Hub imenishika mkono kunisaidia katika hatua zangu za kibunifu."</p>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+
+                              <div class="col-sm-2" style="border-radius:10px">
+                                    
+                                    <img class="profile-pic card-img-top" style="width: 60px;height:65px;margin-top:15px;border-radius:10px"" src="images/COSTECH-13 - Copy.jpg" >
+                                    
+                              </div>
+
+                              <div class="col-sm-10">
+                                    
+                                    <div class="profile">
+                                      
+                                      <h4 class="cust-name">Sharmila Hassan</h4>
+                                    <p class="cust-profession">Mbunifu</p>    
+                                    </div>
+                        </div>
+
+                    </div>
+
+				</div>
+
+			</div>
+            <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" style="line-height: .2;"><img src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" style="height:50px;width:50px;"></h4>
+                        
+                        <div class="template-demo">
+                            <p>"Naishukuru serikali kupitia iBUA kwa ufuatiliaji na utekelezaji wenye matokeo chanya."</p>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+
+                              <div class="col-sm-2" style="border-radius:10px">
+                                    
+                                    <img class="profile-pic card-img-top" style="width: 60px;height:65px;margin-top:15px;border-radius:10px"" src="images/gee.jpeg">
+                                    
+                              </div>
+
+                              <div class="col-sm-10">
+                                    
+                                    <div class="profile">
+                                      
+                                      <h4 class="cust-name">Hamisa Juma</h4>
+                                    <p class="cust-profession">Mbunifu</p>    
+                                    </div>
+                        </div>
+
+                    </div>
+
+				</div>
+
+			</div>
+            
+            <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" style="line-height: .2;"><img src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" style="height:50px;width:50px;"></h4>
+                        
+                        <div class="template-demo">
+                            <p>"iBUA Hub imenishika mkono kunisaidia katika hatua zangu za kibunifu.."</p>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+
+                              <div class="col-sm-2" >
+                                    
+                                    <img class="profile-pic card-img-top" style="width: 60px;height:65px;margin-top:15px;border-radius:10px" src="https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                                    
+                              </div>
+
+                              <div class="col-sm-10">
+                                    
+                                    <div class="profile">
+                                      
+                                      <h4 class="cust-name">Amirat Omary</h4>
+                                    <p class="cust-profession">Mbunifu</p>    
+                                    </div>
+                        </div>
+
+                    </div>
+
+				</div>
+
+			</div>
+            
+
+
 		</div>
-	</section>
+
+    </div>
+	
 
     <div class="container">
         <h2>Our Partners </h2>
