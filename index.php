@@ -34,6 +34,15 @@ https://www.tooplate.com/view/2127-little-fashion
 
 -->
 <style>
+    .carousel-control-prev,
+        .carousel-control-next {
+            background-color: #e1e1e1;
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     
  @media (max-width:991.98px) {
      .padding {
@@ -230,6 +239,7 @@ https://www.tooplate.com/view/2127-little-fashion
                             </div>
                         </div>
                     </div>
+
                 </div>
 
             </section>
@@ -242,17 +252,36 @@ https://www.tooplate.com/view/2127-little-fashion
             </div>
             <div class="col-lg-12 col-12">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                <?php
+                $host = "localhost";
+                $username = "root";
+                $password = "";
+                $db = "ibuahubdatastore";
+                $port = 3306;
+
+                // Create database connection
+                $conn = new mysqli($host, $username, $password, $db, $port);
+                if ($conn->connect_error) {
+                    die("Connection failed: ". $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM `events` ORDER BY `id` DESC";
+                $result = $conn->query($sql);
+                $activeClass = 'active';
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {?>
+                       <div class="carousel-item <?php echo $activeClass;?>">
                         <div class="row">
                             <div class="col-lg-7 col-12">
-                                <img src="images/saba.jpeg" class="img-fluid mh-100" alt="">
+                                <img src="images/<?php echo $row['photo'];?>" class="img-fluid mh-100" alt="">
                             </div>
                             <div class="col-lg-5 col-12">
                                 <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
-                                    <h4 class="mb-3">iBUA <span>Hub</span> <br>Talent <span>Pool</span> Program</h4>
-                                    <p>Specialized initiative designed to identify, nurture, and develop exceptional talent in various fields within the Zanzibar innovation ecosystem.</p>
+                                    <h4 class="mb-3"> <span> <?php echo $row['description'];?></span> </h4>
+                                    <p><?php echo $row['description'];?></p>
                                     <div class="mt-2 mt-lg-auto">
-                                        <a href="about.html" class="custom-link mb-2">
+                                        <a href="<?php echo $row['link'];?>" class="custom-link mb-2">
                                             Read more 
                                             <i class="bi-arrow-right ms-2"></i>
                                         </a>
@@ -261,25 +290,17 @@ https://www.tooplate.com/view/2127-little-fashion
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-lg-7 col-12">
-                                <img src="images/COSTECH-19 - Copy.jpg" class="img-fluid mh-100" alt="">
-                            </div>
-                            <div class="col-lg-5 col-12">
-                                <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
-                                    <h4 class="mb-3">iBUA <span>Hub</span> <br>Management <span>training</span> Support</h4>
-                                    <p>Aims to equip entrepreneurs, innovators, and business leaders with the skills, knowledge, and tools necessary to effectively manage and grow their ventures.</p>
-                                    <div class="mt-2 mt-lg-auto">
-                                        <a href="about.html" class="custom-link mb-2">
-                                            Read more 
-                                            <i class="bi-arrow-right ms-2"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        $activeClass = '';
+                    }
+                } else {
+                    echo "NO ITEMS UPLOADED";
+                }
+
+                $conn->close();
+            ?>
+                   
+                 
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -525,12 +546,14 @@ https://www.tooplate.com/view/2127-little-fashion
         <script>
                $('.clients-carousel').owlCarousel({
                    loop: true,
+                  
                    nav: false,
                    autoplay: true,
                    autoplayTimeout: 5000,
                    animateOut: 'fadeOut',
                    animateIn: 'fadeIn',
                    smartSpeed: 450,
+                   controls:true,
                    margin: 30,
                    responsive: {
                        0: {
